@@ -7,11 +7,14 @@ import pandas # importar a base de dados
 # pyautogui.press -> apertar 1 tecla
 # pyautogui.hotkey -> atalho (combinação de teclas)
 
-pyautogui.PAUSE = 0.5
+pyautogui.PAUSE = 0.1
 
 pyautogui.press("win")
+time.sleep(.6)
 pyautogui.write("chrome")
+time.sleep(.6)
 pyautogui.press("enter")
+time.sleep(.6)
 link = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
 pyautogui.write(link)
 pyautogui.press("enter")
@@ -27,7 +30,7 @@ pyautogui.press("enter")
 
 #pythonimpressionador@gmail.com sua senha aqui 
  
-tabela = pandas.read_csv("atividades/produtos.csv")
+tabela = pandas.read_csv("atividades/primeira-automacao/produtos.csv")
 print(tabela)
 
 for linha in tabela.index:
@@ -52,8 +55,6 @@ for linha in tabela.index:
     obs = tabela.loc[linha, "obs"]
     if not pandas.isna(obs):
         pyautogui.write(str(obs))
-        
-    pyautogui.write(obs)
 
     pyautogui.press("tab")
     pyautogui.press("enter")
