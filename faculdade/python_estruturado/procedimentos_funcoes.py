@@ -1,5 +1,6 @@
 # fazer uma função que encontra o menor valor de uma lista
 print("\nMenor valor da lista")
+
 def menor_valor(lista):
     menor = lista[0]
     for num in lista:
@@ -14,6 +15,7 @@ print(f"O menor número da lista é o {menor}")
 
 # fazer uma função que retorne a soma de todos os elementos da lista
 print("\nSoma dos números pares")
+
 def soma(lista):
     soma = 0
     for numero in lista:
@@ -59,18 +61,40 @@ print(f"O fatorial de {numero}! é {fatorando}")
 # fazer uma função que retorna se o número é primo ou não
 print("\nÉ primo ou não?")
 
-def primo(num):
-    pri = "é primo"
-    if (num < 2):
-        pri = "não é primo"
+# def primo(num):
+#     pri = "é primo"
+#     if (num < 2):
+#         pri = "não é primo"
         
+#     i = num // 2
+#     while (i > 1):
+#         if (num % i == 0):
+#             pri = "não é primo"
+#         i -= 1
+#     return pri
+
+# numero = eval(input("Digite um número: "))
+# resultado = primo(numero)
+# print(f"O número {numero} {resultado}")
+
+
+def primo(num):
+    if (num < 2):
+        return False
     i = num // 2
     while (i > 1):
         if (num % i == 0):
-            pri = "não é primo"
+            return False
         i -= 1
-    return pri
+    return True
+
+def imprimir_resultado(num, resultado):
+    mensagem = f"O número {num} não é primo"
+    if (resultado):
+        mensagem = f"O número {num} é primo"
+    return mensagem
 
 numero = eval(input("Digite um número: "))
 resultado = primo(numero)
-print(f"O número {numero} {resultado}")
+msg = imprimir_resultado(numero, resultado)
+print(msg)

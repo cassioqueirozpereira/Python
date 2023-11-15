@@ -51,7 +51,7 @@ for i in range(len(lista)):
         soma += lista[i]
 print(f"A soma dos elementos pares da lista é {soma}")
 
-print("\nEstratégio 2")
+print("\nEstratégia 2")
 lista = [10, 2, 5, 7, 6, 3]
 soma = 0
 for num in lista:
