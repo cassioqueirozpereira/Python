@@ -89,7 +89,7 @@ class Conta:
         self.saldo = saldo
 
     def depositar(self, valor):
-        self.valor += valor
+        self.saldo += valor
 
     def sacar(self, valor):
         if self.saldo < valor:
@@ -111,7 +111,13 @@ cliente2 = Cliente("987654321-10", "Carlos", "Rua zero")
 
 conta = Conta([cliente1, cliente2], 12000000, 2500.00)
 
-print(cliente1.endereco)
+conta.depositar(1000)
+
+conta.sacar(500)
+
+print(f"\nO primeiro cliente se chama: {cliente1.nome} e tem o endereço: {cliente1.endereco}")
+print(f"\nO segundo cliente se chama: {cliente2.nome} e tem o endereço: {cliente2.endereco}")
+print(f"O número da conta é: {conta.numero} e o saldo é:{conta.saldo}")
 
 
 # composição dependente/estruturada, ou seja, uma classe depende da outra, se excluir uma, a outra para de funcionar
