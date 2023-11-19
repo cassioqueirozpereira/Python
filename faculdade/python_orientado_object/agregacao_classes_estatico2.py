@@ -117,7 +117,7 @@ conta.sacar(500)
 
 print(f"\nO primeiro cliente se chama: {cliente1.nome} e tem o endereço: {cliente1.endereco}")
 print(f"\nO segundo cliente se chama: {cliente2.nome} e tem o endereço: {cliente2.endereco}")
-print(f"O número da conta é: {conta.numero} e o saldo é:{conta.saldo}")
+print(f"\nO número da conta é: {conta.numero} e o saldo é:{conta.saldo}")
 
 
 # composição dependente/estruturada, ou seja, uma classe depende da outra, se excluir uma, a outra para de funcionar
@@ -161,6 +161,7 @@ conta.depositar(1000)
 
 conta.sacar(500)
 
+print("\nAs transações e seus respectivos valores:\n")
 conta.extrato.imprimir()
 
-print(conta.saldo)
+print(f"\nO número da conta dos clientes é: {conta.numero} e o saldo final: {conta.saldo}")
