@@ -49,6 +49,7 @@ def sum(numero):
 
 print(sum(numero))
 
+
 # segundo exemplo de mutabilidade
 print("\n\nSegundo exemplo de mutabilidade\n")
 
@@ -69,18 +70,53 @@ print(nova_lista)
 
 
 # terceiro exemplo
-print("\nTerceiro exemplo. Operator, soma somente dois números\n")
+print("\n\nTerceiro exemplo. Operator, soma somente dois números\n")
 
 # operator tem a função add, sub, mul, truediv
 import operator
 
 print(operator.add(10, 20))
 
+
 # quarto exemplo
-print("\nQuarto exemplo. Reduce soma todos os elementos da lista\n")
+print("\n\nQuarto exemplo. Reduce e operator, soma todos os elementos da lista\n")
 
 from functools import reduce
 
 print(reduce(operator.add, (numero)))
 
 print(reduce(operator.concat, ["\nAprendendo reduce"]))
+
+
+# primeiro exemplo de partial
+print("\n\nExemplo de uma função com partial, onde se soma 1 ao parâmetro passado")
+from functools import partial
+
+soma_1 = partial(operator.add, 1)
+print(f"\nO parâmetro passado é 5, logo a resposta é: {soma_1(5)}")
+
+# exemplo com dados passados pelo usuário que eu implementei
+print("\nExemplo que eu implementei com dados injetados pelo usuário")
+valor = (eval(input("\nDigite um número: ")))
+somador = eval(input("Digite quanto será adicionado ao número: "))
+soma_somador = partial(operator.add, somador)
+print(f"\nO número que vc digitou é: {valor}, seu número {valor} + {somador} é: {soma_somador(valor)}")
+
+# segundo exeplo, sem utilizar o partial, nesse exemplo criamos uma classe pessoa, onde é atribuido a ela os atributos nome e idade.
+print("\nSegundo exemplo sem partial")
+import collections
+from operator import attrgetter
+
+pessoa = collections.namedtuple("pessoa", "nome idade")
+pessoas = [pessoa("Joâo", 40), pessoa("Ana", 20), pessoa("Renata", 25)]
+
+print(sorted(pessoas, key=attrgetter("nome")))
+print(sorted(pessoas, key=attrgetter("idade")))
+
+# segundo exemplo com partial
+print("\nSegundo exemplo com partial")
+sort_nome = partial(sorted, key=attrgetter("nome"))
+sort_idade = partial(sorted, key=attrgetter("idade"))
+
+print(sort_nome(pessoas))
+print(sort_idade(pessoas))
