@@ -1,5 +1,5 @@
 # Implementar uma classe Veículo com atributos de instância "velocidade máxima" e "quilômetros percorridos por litro"
-
+print("\n\n Classe Veículo")
 class Veiculo:
 
     def __init__(self, velocidade_maxima, quilometro_por_litro):
@@ -9,16 +9,17 @@ class Veiculo:
     def radar(self, velocidade):
         self.velocidade = velocidade
         if velocidade <= self.velocidade_maxima:
-            print("Use cinto de segurança")
+            print(f"\nSua velocidade foi de: {velocidade}Km/h. Use cinto de segurança.")
         else:
-            print("Acima do limite de velocidade. Multado!")
+            print(f"\nSua velocidade foi de: {velocidade}Km/h. Acima do limite de velocidade: {self.velocidade_maxima}Km/h. Multado!")
 
     def consumo(self, combustivel):
         self.combustivel = combustivel
-        return print("\nO consumo é {}km/l" . format(self.quilometro_por_litro / combustivel))
+        consumo = self.quilometro_por_litro / combustivel
+        return print(f"\nO consumo é {consumo:.0f}km/l")
     
-transporte = Veiculo(100, 300)
+transporte = Veiculo(110, 300)
 
-transporte.radar(101)
+transporte.radar(111)
 
 transporte.consumo(20)
