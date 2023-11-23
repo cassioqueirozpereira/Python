@@ -15,7 +15,7 @@ usuario = {
 }
 
 # método menos simplificado
-print("\n\nMétodo menos simplificado\n")
+print("\n\nMétodo menos simplificado, onde é necessário duas funções\n")
 
 # retorna a imagem do profile
 
@@ -40,7 +40,7 @@ print(get_imagem_capa(usuario))
 
 
 # utilizando partial
-print("\n\nUtilizando partial\n")
+print("\n\nUtilizando partial, onde é necessário somente uma função\n")
 from functools import partial
 
 def get_imagem(qual_imagem, usuario):
