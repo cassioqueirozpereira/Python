@@ -25,9 +25,9 @@ print(f"\nlista de números pares = {pares}")
 
 
 # utilizar programa funcional para arredondar os valores da lista de números na mesma ordem da lista de precisão
-print("\n\nArredonda lista_num, com lista_precis\n")
+print("\n\nArredonda uma lista de números, com uma lista de precisão")
 
-lista_num = [9.56783, 7.57568, 3.00914, 62321]
+lista_num = [9.56783, 7.57568, 3.00914, 6.2321]
 
 lista_precis = [2, 2, 3, 3]
 
@@ -35,4 +35,18 @@ arredondamento = lambda x, y: round(x, y)
 
 resultado = list(map(arredondamento, lista_num, lista_precis))
 
-print(resultado)
+print(f"\nOs números antes do arredondamento: {lista_num}. Aplicando a lista de precisão {lista_precis}, os números ficam: {resultado}")
+
+
+# utilizar programação funcional para somar todos os números de uma lista
+print("\n\nSomando todos os números de uma lista")
+
+from functools import reduce
+
+numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+soma = lambda x, y: x + y
+
+total = reduce(soma, numero)
+
+print(f"\nO total da soma da lista é: {total}")
