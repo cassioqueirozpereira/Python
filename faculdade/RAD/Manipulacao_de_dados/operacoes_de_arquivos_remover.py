@@ -2,7 +2,7 @@ import os
 
 print("\nREMOVER ARQUIVO\n")
 
-arquivo_a_remover = "arquivo_a_remover.txt"
+arquivo_a_remover = "teste.pdf"
 
 try:
     os.remove(arquivo_a_remover)
@@ -22,7 +22,7 @@ except Exception as erro:
 print("\n RENOMEAR ARQUIVO\n")
 
 nome_antigo = "arquivo_novo.txt"
-nome_novo = "dados.txt"
+nome_novo = "arquivo_antigo.txt"
 
 try:
     os.rename(nome_antigo, nome_novo)
