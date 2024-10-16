@@ -2,7 +2,8 @@ import os
 
 print("\nREMOVER ARQUIVO\n")
 
-arquivo_a_remover = "simple_icon.png"
+diretorio_trabalho = "diretorio_trabalho"
+arquivo_a_remover = os.path.join(diretorio_trabalho, "arquivo_destino.txt")
 
 try:
     os.remove(arquivo_a_remover)
