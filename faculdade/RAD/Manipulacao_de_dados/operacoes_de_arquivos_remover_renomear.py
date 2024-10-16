@@ -2,7 +2,7 @@ import os
 
 print("\nREMOVER ARQUIVO\n")
 
-arquivo_a_remover = "teste.pdf"
+arquivo_a_remover = "simple_icon.png"
 
 try:
     os.remove(arquivo_a_remover)
@@ -35,8 +35,8 @@ except PermissionError as erro:
 except FileExistsError as erro:
     print("Já existe um arquivo com esse nome")
     print("descrição:", erro)
-except Exception as e:
-    print(f"Ocorreu um erro ao renomear o arquivo: {e}")
+except Exception as erro:
+    print(f"Ocorreu um erro ao renomear o arquivo: {erro}")
 
 print("\nFIM DO PROGRAMA\n")
 
