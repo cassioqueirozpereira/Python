@@ -3,7 +3,7 @@ import os
 print("\nREMOVER ARQUIVO\n")
 
 diretorio_trabalho = "diretorio_trabalho"
-arquivo_a_remover = os.path.join(diretorio_trabalho, "arquivo_destino.txt")
+arquivo_a_remover = os.path.join(diretorio_trabalho, "pdf", "teste.jpg")
 
 try:
     os.remove(arquivo_a_remover)
