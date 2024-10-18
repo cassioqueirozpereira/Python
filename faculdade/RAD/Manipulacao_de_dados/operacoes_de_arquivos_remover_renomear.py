@@ -2,8 +2,8 @@ import os
 
 print("\nREMOVER ARQUIVO\n")
 
-diretorio_trabalho = "diretorio_trabalho"
-arquivo_a_remover = os.path.join(diretorio_trabalho, "pdf", "teste.jpg")
+diretorio_trabalho = "meu_banco.db"
+arquivo_a_remover = os.path.join(diretorio_trabalho)
 
 try:
     os.remove(arquivo_a_remover)
