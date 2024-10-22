@@ -7,8 +7,7 @@ try:
 
     # execusão de um comando
 
-    comando = '''ALTER TABLE Veiculo
-                    ADD motor REAL NOT NULL;'''
+    comando = '''DROP TABLE Veiculo;'''
 
     cursor.execute(comando)
 
