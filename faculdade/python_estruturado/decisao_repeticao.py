@@ -15,7 +15,7 @@ if (a % 2 == 0):
 else:
     print(f"O número {a} é ímpar")
 
-# verificar se o aluno está aprovado, em recuperação ou reprovado
+# verificar se o aluno está aprovado, em recuperaçã o ou reprovado
 print("\nAprovado, em recuperação ou reprovado?")
 media = 5
 if (media >= 7):
