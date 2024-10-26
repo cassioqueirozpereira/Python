@@ -1,0 +1,15 @@
+Palíndromo: Escreva uma função que verifique se uma palavra é um palíndromo.
+
+Ordenar Lista: Crie uma função que ordene uma lista de números em ordem crescente.
+
+Exercícios Avançados
+Anagramas: Escreva uma função que verifique se duas strings são anagramas uma da outra.
+
+Fatorial: Crie uma função que calcule o fatorial de um número.
+
+Dicionário Frequência: Escreva uma função que conte a frequência de cada caractere em uma string e retorne um dicionário.
+
+Matriz Transposta: Crie uma função que receba uma matriz (lista de listas) e retorne a matriz transposta.
+
+Contagem de Vogais: Escreva uma função que conte o número de vogais em uma string.
+
