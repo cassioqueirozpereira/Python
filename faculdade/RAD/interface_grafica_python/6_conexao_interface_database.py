@@ -110,3 +110,62 @@ class principal_BD:
             print("Não foi possível ler os dados.")
         
         return codigo, nome, preco
+    
+    # cadastrar produto
+    def f_cadastrar_produto(self):
+        try:
+            print("**************dados disponíveis**************")
+            codigo, nome, preco = self.f_ler_campos()
+            self.objBD.inserir_dados(codigo, nome, preco)
+            self.tree_produtos.insert('', 'end', iid=self.iid, values=(codigo, nome, preco))
+            self.iid = self.iid + 1
+            self.id = self.id + 1
+            self.f_limpar_tela()
+            print("Produto cadastrado com sucesso!")
+        except:
+            print("Não foi possível fazer o cadastro.")
+
+    
+    def f_atualizar_produto(self):
+        try:
+            print("**************dados disponíveis**************")
+            codigo, nome, preco = self.f_ler_campos()
+            # recarregar dados na tela
+            self.tree_produtos.delete(*self.tree_produtos.get_children())
+            self.carregar_dados_iniciais()
+            self.f_limpar_tela()
+            print("Produto atualizado com sucesso!")
+        except:
+            print("Nâo foi possível fazer a atualização.")
+    
+    # excluir produto
+    def f_excluir_produto(self):
+        try:
+            print("**************dados disponíveis**************")
+            codigo, nome, preco = self.f_ler_campos()
+            self.objBD.excluir_dados(codigo)
+            # recarregar dados na tela
+            self.tree_produtos.delete(*self.tree_produtos.get_children())
+            self.carregar_dados_iniciais()
+            self.f_limpar_tela()
+            print("Produto excluido com sucesso!")
+        except:
+            print("Não foi possível excluir o produto.")
+    
+    #limpar tela
+    def f_limpar_tela(self):
+        try:
+            print("**************dados disponíveis**************")
+            self.txt_codigo.delete(0, tk.END)
+            self.txt_nome.delete(0, tk.END)
+            self.txt_preco.delete(0, tk.END)
+            print("Campos limpoas!")
+        except:
+            print("Não foi possível limpar os campos.")
+
+# programa principal
+janela = tk.TK()
+principal = principal_BD(janela)
+janela.title("Bem vindo à aplicação de banco de dados")
+janela.geometry("720x600+10+10")
+janela.mainloop()
