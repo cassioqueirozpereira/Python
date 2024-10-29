@@ -45,10 +45,10 @@ class principal_BD:
         self.lb_codigo.place(x=100, y=50)
         self.txt_codigo.place(x=250, y=50)
 
-        self.txt_nome.place(x=100, y=100)
+        self.lb_nome.place(x=100, y=100)
         self.txt_nome.place(x=250, y=100)
 
-        self.txt_preco.place(x=100, y=150)
+        self.lb_preco.place(x=100, y=150)
         self.txt_preco.place(x=250, y=150)
 
         self.btn_cadastrar.place(x=100, y=200)
@@ -164,7 +164,7 @@ class principal_BD:
             print("Não foi possível limpar os campos.")
 
 # programa principal
-janela = tk.TK()
+janela = tk.Tk()
 principal = principal_BD(janela)
 janela.title("Bem vindo à aplicação de banco de dados")
 janela.geometry("720x600+10+10")
