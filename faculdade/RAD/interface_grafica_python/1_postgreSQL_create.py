@@ -4,7 +4,7 @@ try:
     connection = conector.connect(
         database="postgres",
         user="postgres",
-        password="senha123",
+        password="V0ucomerfruta",
         host="127.0.0.1",
         port="5432",
         options="-c client_encoding=UTF8"

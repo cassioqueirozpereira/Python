@@ -10,7 +10,7 @@ class AppBD:
         try:
             self.connection = psycopg2.connect(
                                     user = "postgres",
-                                    password = "senha123",
+                                    password = "V0ucomerfruta",
                                     host = "127.0.0.1",
                                     port = "5432",
                                     database = "postgres")
