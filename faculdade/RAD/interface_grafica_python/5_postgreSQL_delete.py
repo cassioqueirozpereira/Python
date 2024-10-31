@@ -4,7 +4,9 @@ connection = psycopg2.connect(database = "postgres", user = "postgres", password
 
 cursor = connection.cursor()
 
-cursor.execute('''DELETE FROM AGENDA WHERE id = 1''')
+cursor.execute('''DROP TABLE Teste;''')
+
+connection.commit()
 
 print("Delete performed successfully")
 
