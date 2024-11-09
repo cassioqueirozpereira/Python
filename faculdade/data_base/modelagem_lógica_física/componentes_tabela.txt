@@ -1,0 +1,27 @@
+NOMES BÁSICOS:
+
+Relação = Tabela (por isso que se chama modelo relacional)
+
+Atributo = Coluna da Tabela
+
+Valores dos Atributo = Domínio (inteiro, float, char, date, etc)
+
+Conjunto de Atributo = Esquema
+
+Tupla = Linha
+
+Conjunto de Tuplas = Instância
+
+Campo = Encontro de Linha e Coluna
+
+Conteúdo do Campo = Valor
+
+Campos sem Conteúdo = Nulo
+
+Chave Primária = Atributo que identifica as linhas da tabela, ou seja, um atributo com valores que não se repetem. Um valor corresponde a uma linha e uma linha possui um unico valor de chave primária. A chave primária não pode ser nula. Por fim, toda tabela tem que ter uma chave primária, seja simples ou composta. Se não tiver, devemos criar uma.
+
+Chave Simples = Composta somente por um atributo chave ou identificador
+
+Chave Composta = Composta por dois ou mais atributos chave ou identificador
+
+Chave Estrangeira = Chave primária de uma tabela que liga à outra tabela, ou seja, faz a relação entre as tabelas.
