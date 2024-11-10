@@ -1,0 +1,3 @@
+CARDINALIDADE
+
+quando a cardinalidade ou o relacionamento é 1 para 1 posso escolher qual tabela ligarei a outra, através de chave estrangeira.

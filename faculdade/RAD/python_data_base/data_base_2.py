@@ -9,7 +9,10 @@ try:
 
     comando = '''CREATE TABLE Pessoa (
                 cpf INTEGER NOT NULL,
-                nome TEXT NOT NULL, nascimento DATE NOT NULL, oculos BOOLEAN NOT NULL,PRIMARY KEY (cpf)
+                nome TEXT NOT NULL,
+                nascimento DATE NOT NULL,
+                oculos BOOLEAN NOT NULL,
+                PRIMARY KEY (cpf)
                 );'''
 
     cursor.execute(comando)

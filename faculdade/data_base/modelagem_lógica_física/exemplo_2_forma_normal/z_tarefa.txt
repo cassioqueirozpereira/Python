@@ -1,0 +1,1 @@
+transformar as imagens da primeira forma normal, segunda forma normal e terceira forma normal em tabelas no postgres, com python.

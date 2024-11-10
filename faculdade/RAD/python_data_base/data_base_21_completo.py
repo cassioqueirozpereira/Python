@@ -4,17 +4,6 @@ class Livro:
         self.autor = autor
         self.preco = preco
 
-class Cliente:
-    def __init__(self, nome, email):
-        self.nome = nome
-        self.email = email
-
-class Pedido:
-    def __init__(self, cliente_id, livro_id, quantidade, data_pedido):
-        self.cliente_id = cliente_id
-        self.livro_id = livro_id
-        self.quantidade = quantidade
-        self.data_pedido = data_pedido
 
 import sqlite3
 
@@ -91,9 +80,7 @@ def inserir_dados(conexao):
 def exibir_pedidos(conexao):
     cursor = conexao.cursor()
 
-    query = '''SELECT Pedidos.id, Clientes.nome, Livros.titulo, Pedidos.quantidade, Pedidos.data_pedido FROM Pedidos
-    JOIN Clientes ON Pedidos.cliente_id = Clientes.id
-    JOIN Livros ON Pedidos.livro_id = Livros.id'''
+    query = '''SELECT * FROM Pedidos'''
 
     cursor.execute(query)
     pedidos = cursor.fetchall()
