@@ -4,7 +4,7 @@ from datetime import date
 def conectar_banco():
     try:
         connection = conector.connect(
-            database = "postgres",
+            database = "TABLE_NORMALIZATION",
             user="postgres",
             password="V0ucomerfruta",
             host="127.0.0.1",
@@ -48,7 +48,7 @@ def create_tables():
                     )''')
 
         connection.commit()
-        print("Tabelas criadas com sucesso")
+        print("Tabelas criadas com sucesso!")
     except Exception as erro:
         print(f"Não foi possível criar as tabelas. Erro: {erro}")
     

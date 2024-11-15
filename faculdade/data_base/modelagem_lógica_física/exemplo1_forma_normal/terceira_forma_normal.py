@@ -78,7 +78,7 @@ def enter_data():
         cursor.executemany('''INSERT INTO PROJETO_EMPREGADO_3FN (cod_proj, cod_emp, data_inicio, tempo_alocado) VALUES (%s, %s, %s, %s)''', projeto_empregado)
 
         connection.commit()
-        print("Dados inseridos na tabela com sucesso!")
+        print("Dados inseridos com sucesso!")
     
     except Exception as erro:
         print(f"Não foi possível inserir os dados na tabela. Erro: {erro}")

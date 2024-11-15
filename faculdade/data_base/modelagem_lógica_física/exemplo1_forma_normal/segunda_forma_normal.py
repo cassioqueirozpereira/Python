@@ -5,7 +5,7 @@ from primeira_forma_normal import exportando_projeto
 def connection_base():
     try:
         connection = conector.connect(
-            database = "postgres",
+            database = "TABLE_NORMALIZATION",
             user = "postgres",
             password = "V0ucomerfruta",
             host = "127.0.0.1",
