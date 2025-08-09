@@ -23,12 +23,13 @@ pyautogui.write(link)
 pyautogui.press("enter")
 time.sleep(3)
 # selecionando o ponto da tela onde vai ser clicado
-pyautogui.click(x=722, y=449)
+# pyautogui.click(x=722, y=449) #tirei pois conforme o tamanho da tela não clica no lugar certo
 
 # clicks=3 -> ele vai dar tres cliques
 # button="right" -> ele vai clicar com o botão direito
 
 # pythonimpressionador@gmail.com sua senha aqui
+pyautogui.press("tab")
 pyautogui.write("pythonimpressionador@gmail.com")
 pyautogui.press("tab")
 pyautogui.write("sua senha aqui")
@@ -45,7 +46,8 @@ time.sleep(1)
 for linha in tabela.index:
 
     # click na posição escolhida através do auxiliar.py
-    pyautogui.click(x=785, y=310)
+    pyautogui.press("tab")
+    # pyautogui.click(x=785, y=310)
 
     # codigo recebe tabela na localização da linha "nome da coluna" (banco de dados). Obs: O comando write só escreve no formato string, se estiver em outro formato, é necessário converte-lo
     codigo = tabela.loc[linha, "codigo"]
@@ -73,6 +75,7 @@ for linha in tabela.index:
 
     pyautogui.press("tab")
     pyautogui.press("enter")
+    pyautogui.press("tab", presses=8, interval=0.01)
 
     # rola a barra de rolagem para cima se o número for positivo e para baixo se for negativo, quanto maior o número mais irá rolar
-    pyautogui.scroll(10000)
+    # pyautogui.scroll(10000)
