@@ -1,0 +1,23 @@
+Testing
+All right!
+Nice, we are learning how to read files.
+Testing if read something after point
+
+Testing if read something after empty line.
+Checking if show the caracter "\n"
+Checking now without the quotes \n
+
+
+The most important sentence "I love my family forever"
+
+
+1 - Respect my wife
+2 - Finish my faculty
+3 - See videos less
+4 - Continue without masturbation and play games
+5 - I have that studing more inglish
+6 - Choose between ABAP (Advanced Business Application Programing) or LLM (Large Language Model)
+7 - Work in the modelity home office taking at dollar
+8 - at least once year go out a trip with my family or wife
+9 - Try once month spend time alone my wife
+10 - All is worthwhile if the soul is not small
