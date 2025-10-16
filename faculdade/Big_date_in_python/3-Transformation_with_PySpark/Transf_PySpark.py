@@ -16,7 +16,7 @@ resultado = lista_rdd.flatMap(par_ordenado).collect()
 print(resultado)
 # Aplicando a transformação "map" com a ação "collect"
 result = lista_rdd.map(par_ordenado).collect()
-
+# Mostra o resultado
 print(result)
-
+# fecha a seção
 spark_contexto.stop
